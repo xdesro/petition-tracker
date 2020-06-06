@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Intro />
     <ul class="petitions-list">
       <PetitionListItem
         class="petitions-list__item"
@@ -14,11 +15,13 @@
 <script>
 import { mapState } from "vuex";
 
+import Intro from "./components/Intro";
 import PetitionListItem from "./components/PetitionListItem";
 
 export default {
   name: "App",
   components: {
+    Intro,
     PetitionListItem,
   },
   computed: mapState({
@@ -26,13 +29,3 @@ export default {
   }),
 };
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

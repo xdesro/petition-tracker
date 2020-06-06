@@ -1,0 +1,20 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: $font--text;
+  min-height: 100vh;
+  margin: 0;
+  color: $color--neutral;
+  background-color: $color--background;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#app {
+  width: 100%;
+  padding: 0 1.5rem;
+}

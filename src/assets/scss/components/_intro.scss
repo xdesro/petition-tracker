@@ -1,0 +1,27 @@
+.intro {
+  font-size: 0.875rem;
+  margin-bottom: 5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  &__staple {
+    display: block;
+    margin-bottom: 7rem;
+    text-transform: uppercase;
+    color: $color--deemphasized;
+  }
+  &__logo {
+    display: block;
+    width: 14rem;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+    color: $color--heavy;
+  }
+  &__description {
+    line-height: 1.5;
+    margin: 0 auto 2rem;
+  }
+  &__progress {
+    text-transform: uppercase;
+    color: $color--heavy;
+  }
+}
