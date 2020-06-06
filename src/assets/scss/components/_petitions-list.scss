@@ -1,15 +1,15 @@
 .petitions-list {
   display: grid;
   grid-row-gap: 0.75rem;
+  margin-bottom: 5rem;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 5rem;
 
   &:before {
     font-size: 0.625rem;
     display: inline-block;
     margin-bottom: -0.5rem;
-    content: "Start Here";
+    content: 'Start Here';
     text-transform: uppercase;
     color: $color--mid;
   }
@@ -32,13 +32,14 @@
     display: block;
     width: calc(100% + 2px);
     height: 0.25rem;
-    content: "";
+    content: '';
     transition: transform 0.2s ease;
     transform: scaleX(0);
     transform-origin: 0% 0%;
     background-color: var(--petition-border);
   }
-  &:hover {
+  &:hover,
+  &:active {
     &:after {
       transform: scaleX(1);
     }
@@ -47,6 +48,7 @@
   &--signed {
     --petition-border: #{$color--deemphasized};
     --petition-title: #{$color--mid};
+
     &:after {
       content: unset;
     }
@@ -63,7 +65,6 @@
 
     #{$this}--signed & {
       cursor: default;
-      pointer-events: none;
     }
   }
   &__title {
