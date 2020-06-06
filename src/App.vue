@@ -1,19 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ul class="petitions-list">
+      <PetitionListItem
+        class="petitions-list__item"
+        v-for="petition in petitions"
+        :key="petition.url"
+        :petition="petition"
+      />
+    </ul>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState, mapActions } from "vuex";
+
+import PetitionListItem from "./components/PetitionListItem";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    PetitionListItem,
+  },
+  computed: mapState({
+    petitions: (state) => state.petitions.all,
+  }),
+  methods: mapActions("petitions", ["signPetition"]),
+};
 </script>
 
 <style lang="scss">
@@ -21,7 +33,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
