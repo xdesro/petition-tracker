@@ -27,14 +27,14 @@ export default {
   props: ["petition"],
   components: {
     IconArrowAngle,
-    IconCheck,
+    IconCheck
   },
   computed: {
     petitionUrl() {
       const url = new URL(this.petition.url);
       return url.hostname;
-    },
+    }
   },
-  methods: mapActions("petitions", ["signPetition"]),
+  methods: mapActions("petitions", ["signPetition"])
 };
 </script>

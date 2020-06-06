@@ -37,7 +37,7 @@ import IconTwitter from "./icons/IconTwitter";
 export default {
   components: {
     IconGithub,
-    IconTwitter,
-  },
+    IconTwitter
+  }
 };
 </script>

@@ -6,14 +6,14 @@ import petitions from "./petitions";
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
-  key: "petition-tracker",
+  key: "petition-tracker"
 });
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    petitions,
+    petitions
   },
-  plugins: [vuexLocal.plugin],
+  plugins: [vuexLocal.plugin]
 });

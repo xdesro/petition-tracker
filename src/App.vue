@@ -30,11 +30,11 @@ export default {
     Intro,
     ScrollingHeader,
     PetitionListItem,
-    Footer,
+    Footer
   },
   data() {
     return {
-      scrolled: false,
+      scrolled: false
     };
   },
   created() {
@@ -44,7 +44,7 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   computed: mapState({
-    petitions: (state) => state.petitions.all,
+    petitions: state => state.petitions.all
   }),
   methods: {
     handleScroll() {
@@ -52,13 +52,13 @@ export default {
     },
     scrollToFirstUnsigned() {
       const firstUnsignedIndex = this.petitions.findIndex(
-        (petition) => !petition.signed
+        petition => !petition.signed
       );
       window.scrollTo(
         0,
         this.$refs[`petition-${firstUnsignedIndex}`][0].$el.offsetTop - 100
       );
-    },
-  },
+    }
+  }
 };
 </script>

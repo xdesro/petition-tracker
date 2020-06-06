@@ -46,19 +46,19 @@ import { mapState } from "vuex";
 export default {
   computed: {
     ...mapState({
-      petitions: (state) => state.petitions.all,
+      petitions: state => state.petitions.all
     }),
     petitionsCount() {
       return this.petitions.length;
     },
     petitionsSigned() {
-      return this.petitions.filter((petition) => petition.signed).length;
-    },
+      return this.petitions.filter(petition => petition.signed).length;
+    }
   },
   methods: {
     handleClick() {
       this.$emit("activate");
-    },
-  },
+    }
+  }
 };
 </script>

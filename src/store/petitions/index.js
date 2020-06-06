@@ -1,12 +1,12 @@
 import petitions from "../../../petitions.json";
 const state = () => ({
-  all: petitions.map((petition) => Object.assign(petition, { signed: false })),
+  all: petitions.map(petition => Object.assign(petition, { signed: false }))
 });
 const getters = {};
 const actions = {
   signPetition({ commit }, petition) {
     commit("setPetitionSigned", petition);
-  },
+  }
 };
 const mutations = {
   getPetitions(state) {
@@ -17,8 +17,8 @@ const mutations = {
     }
   },
   setPetitionSigned(state, { url }) {
-    state.all.find((petition) => petition.url === url).signed = true;
-  },
+    state.all.find(petition => petition.url === url).signed = true;
+  }
 };
 
 export default {
@@ -26,5 +26,5 @@ export default {
   state,
   getters,
   actions,
-  mutations,
+  mutations
 };
