@@ -54,3 +54,8 @@ I would love, love, love your help with this project — if you have improvement
 ## 💁‍ Questions? Concerns?
 
 Feel free to reach out [on Twitter](http://twitter.com/xdesro). Friendly feedback and advice is always welcome. Contributions doubly so.
+
+## 🗣 Colophon
+
+- **Fonts in use** include Nick Sherman's excellent _Margo_, which you can find for purchase [right here](https://www.futurefonts.xyz/hex/margo), as well as Klim Type Foundry's _Söhne Mono_, which you can check out [here](https://klim.co.nz/retail-fonts/soehne-mono/).
+- The site is powered by **Vue.js** and deployed by **Netlify**.
