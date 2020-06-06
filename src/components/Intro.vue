@@ -22,8 +22,9 @@
       </svg>
     </h1>
     <p class="intro__description">
-      We wanted to make it easier to find and sign the countless petitions for
-      racial justice and an end to police violence, so we made you this.
+      We wanted it to be as easy as possible to find and sign the countless
+      petitions for racial justice and an end to police violence, so we made you
+      this.
     </p>
     <div class="intro__progress">
       {{ petitionsSigned }}/{{ petitionsCount }} signed

@@ -10,6 +10,12 @@ body {
   color: $color--neutral;
   background-color: $color--background;
 }
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  margin: 0;
+}
 a {
   text-decoration: none;
   color: inherit;

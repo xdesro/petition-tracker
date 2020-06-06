@@ -3,7 +3,6 @@
     <Intro />
     <ul class="petitions-list">
       <PetitionListItem
-        class="petitions-list__item"
         v-for="petition in petitions"
         :key="petition.url"
         :petition="petition"

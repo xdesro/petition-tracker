@@ -8,3 +8,11 @@
     url("../fonts/soehne-mono/soehne-mono-web-buch.eot")
       format("embedded-opentype");
 }
+
+@font-face {
+  font-family: "Margo Condensed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/margo/Margo_Condensed_v0.1-Medium.woff2") format("woff2"),
+    url("../fonts/margo/Margo_Condensed_v0.1-Medium.woff") format("woff");
+}
