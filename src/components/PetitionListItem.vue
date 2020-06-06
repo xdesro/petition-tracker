@@ -13,7 +13,9 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   props: ["petition"],
+  methods: mapActions("petitions", ["signPetition"]),
 };
 </script>

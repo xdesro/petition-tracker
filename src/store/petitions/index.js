@@ -1,17 +1,6 @@
+import petitions from "../../../petitions.json";
 const state = () => ({
-  all: [
-    {
-      name: "Black Lives Matter #DefundThePolice",
-      url: "https://blacklivesmatter.com/defundthepolice/",
-      signed: true,
-    },
-    {
-      name: "Reopen Tamir Rice's criminal case",
-      url:
-        "https://www.change.org/p/department-of-justice-investigate-the-killing-of-tamir-rice",
-      signed: false,
-    },
-  ],
+  all: petitions.map((petition) => Object.assign(petition, { signed: false })),
 });
 const getters = {};
 const actions = {

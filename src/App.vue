@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
+import { mapState } from "vuex";
 
 import PetitionListItem from "./components/PetitionListItem";
 
@@ -24,7 +24,6 @@ export default {
   computed: mapState({
     petitions: (state) => state.petitions.all,
   }),
-  methods: mapActions("petitions", ["signPetition"]),
 };
 </script>
 
