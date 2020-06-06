@@ -1,0 +1,24 @@
+.footer {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-top: 1px solid $color--mid;
+  padding-block: 3rem;
+  &__social-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    justify-content: start;
+    align-items: center;
+  }
+  &__social-list-item {
+    width: 1.5rem;
+  }
+  a {
+    color: $color--mid;
+    &:hover {
+      color: $color--heavy;
+    }
+  }
+}

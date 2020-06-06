@@ -19,9 +19,40 @@
   &__description {
     line-height: 1.5;
     margin: 0 auto 2rem;
+    a {
+      color: $color--mid;
+      &:hover {
+        color: $color--heavy;
+      }
+    }
   }
   &__progress {
     text-transform: uppercase;
     color: $color--heavy;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  &__progress-bar {
+    margin-bottom: 3rem;
+  }
+
+  &__action {
+    display: block;
+    margin: 0 auto;
+    font-family: $font--text;
+    color: $color--background;
+    background-color: $color--heavy;
+    text-transform: uppercase;
+    border: 1px solid $color--heavy;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.1s ease;
+    &:hover,
+    &:active {
+      background-color: $color--background;
+      color: $color--heavy;
+    }
   }
 }

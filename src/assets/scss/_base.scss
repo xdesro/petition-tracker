@@ -3,6 +3,9 @@
 *:after {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $font--text;
   min-height: 100vh;
@@ -17,10 +20,11 @@ h3 {
   margin: 0;
 }
 a {
-  text-decoration: none;
   color: inherit;
 }
 #app {
   width: 100%;
   padding: 0 1.5rem;
+  max-width: 32rem;
+  margin: 0 auto;
 }

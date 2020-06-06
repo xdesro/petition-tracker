@@ -24,7 +24,7 @@
     <p class="intro__description">
       We wanted it to be as easy as possible to find and sign the countless
       petitions for racial justice and an end to police violence, so we made you
-      this.
+      this. <a href="#footer">You can learn more about the project here</a>.
     </p>
     <div class="intro__progress">
       {{ petitionsSigned }}/{{ petitionsCount }} signed
@@ -34,6 +34,10 @@
       :max="petitionsCount"
       :value="petitionsSigned"
     />
+    <button class="intro__action" @click="handleClick">
+      <span v-if="!petitionsSigned > 0">Get Started</span>
+      <span v-else>Keep Going</span>
+    </button>
   </header>
 </template>
 
@@ -51,7 +55,10 @@ export default {
       return this.petitions.filter((petition) => petition.signed).length;
     },
   },
+  methods: {
+    handleClick() {
+      this.$emit("activate");
+    },
+  },
 };
 </script>
-
-<style></style>

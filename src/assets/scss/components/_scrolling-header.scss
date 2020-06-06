@@ -1,0 +1,44 @@
+.scrolling-header {
+  position: fixed;
+  top: 0;
+  background-color: $color--background;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  border-bottom: 1px solid $color--mid;
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  grid-column-gap: 0.5rem;
+  &-enter-active,
+  &-leave-active {
+    transition: transform 0.2s;
+  }
+  &-enter,
+  &-leave-to {
+    transform: translateY(-100%);
+  }
+  &__brand {
+    font-family: $font--display;
+    font-size: 1.25rem;
+  }
+  &__progress-bar {
+    width: 5rem;
+    border: none;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    height: 3px;
+    &::-webkit-progress-value,
+    &::-moz-progress-bar {
+      background-color: $color--heavy;
+    }
+  }
+  &__progress {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+}
